@@ -10,9 +10,7 @@ function TaskList() {
     return (
         tasks.map(task => (
             <div key={task.id} className='task-item'>
-                <Link link='/task/${task.id}'>
-                    <h3>{task.title}</h3>
-                </Link>
+                <Link link='/task/${task.id}'>{task.title}</Link>
                 <p>{task.description}</p>
             </div>
         ))

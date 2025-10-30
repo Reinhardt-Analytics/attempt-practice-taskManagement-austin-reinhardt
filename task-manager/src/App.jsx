@@ -1,3 +1,8 @@
 import { TaskList } from './TaskList';
 
-console.log('Hello')
+<BrowserRouter>
+    <Routes>
+        <Route path="/" element={<TaskList />} />
+        <Route path="/task/:id" element={<TaskList />} />
+    </Routes>
+</BrowserRouter>
