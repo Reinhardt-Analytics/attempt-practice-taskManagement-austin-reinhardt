@@ -1,0 +1,10 @@
+:root{
+    --font-size: clamp(1.6rem, calc(1.6rem + 4px), 2.8rem);
+    --text-color: black;
+    --text-background: white;
+    --border-radius: clamp(0.6rem, 0.8rem, 2.8rem);
+}
+
+.task-header{
+    font-size: clamp(2.2rem, calc(2.2rem + 4px), 3.8rem);
+}

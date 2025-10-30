@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const tasks = [
     { id: 1, title: 'Find a book.', description: 'Check availability within the library and select one for rental.' },
@@ -8,13 +9,17 @@ const tasks = [
 
 function TaskList() {
     return (
-        tasks.map(task => (
-            <div key={task.id} className='task-item'>
-                <Link link='/task/${task.id}'>{task.title}</Link>
-                <p>{task.description}</p>
-            </div>
-        ))
+        <div>
+            <h2 className='task-header'>Select a task to complete</h2>
+            {tasks.map(task => (
+                <div key={task.id} className='task-item'>
+                    <Link to={`/task/${task.id}`}>{task.title}</Link>
+                    <p>{task.description}</p>
+                </div>
+            ))}
+        </div>
     );
 }
 
-export default TaskList;
+export { tasks };
+export { TaskList };
